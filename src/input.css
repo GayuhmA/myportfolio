@@ -1,0 +1,61 @@
+/* input.css */
+
+/* 1. SINGLE Tailwind import */
+@import "tailwindcss";
+
+/* 2. Your custom font-face */
+@font-face {
+  font-family: 'SF Mono';
+  src: url('../src/fonts/sfmono/SFMonoMedium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('../src/fonts/Calibre.woff') format('woff');
+  font-display: swap;
+}
+
+/* 3. Theme variables (makes both CSS vars + utility classes) */
+@theme {
+  /* colors */
+  --color-navy:          #0a192f;
+  --color-light-navy:    #112240;
+  --color-lightest-navy: #233554;
+  --color-slate:         #8892b0;
+  --color-light-slate:   #a8b2d1;
+  --color-lightest-slate:#ccd6f6;
+  --color-green:         #64ffda;
+  --color-white:         #e6f1ff;
+
+  /* font */
+  --font-sfmono: 'SF Mono', monospace;
+  --font-calibre: 'Calibre', sans-serif;
+}
+
+/* 4. Optional reset / debug */
+* {
+  /* border: 2px red solid; */
+}
+
+/* Tab hover effect works even when it's hidden */
+.tab-button.group:hover {
+  background-color: #1e2a47; /* Warna latar hover */
+}
+
+
+/* 5. Custom utilities */
+@utility font-sfmono {
+  font-family: var(--font-sfmono);
+}
+@utility text-navy          { color: var(--color-navy); }
+@utility text-light-navy    { color: var(--color-light-navy); }
+@utility text-lightest-navy { color: var(--color-lightest-navy); }
+@utility text-slate         { color: var(--color-slate); }
+@utility text-light-slate   { color: var(--color-light-slate); }
+@utility text-lightest-slate{ color: var(--color-lightest-slate); }
+@utility text-green         { color: var(--color-green); }
+@utility text-white         { color: var(--color-white); }
+@utility bg-navy            { color: var(--color-navy); }
+@utility bg-lightest-navy            { color: var(--color-lightest-navy); }
+@utility bg-light-navy            { color: var(--color-light-navy); }

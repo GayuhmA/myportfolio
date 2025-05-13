@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="icon" href="./src/images/logo.png" type="image/png">
+  <title>GM Aji</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-navy scroll-smooth overflow-x-hidden">
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
+  
+  <header id="navbar" class="h-24 w-full flex justify-center fixed z-50 top-0 items-center text-lightest-slate transition-all duration-300" data-aos="fade-down" data-aos-duration="1000">
+    <div class="w-[90%] md:w-full flex justify-between items-center">
+      <div class="md:ml-12" data-aos="fade-right" data-aos-delay="200">
+        <a href="#home"><img src="./src/images/logo.png" class="w-12 h-12"></img></a>
+      </div>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex justify-around w-[40%] mr-12 font-sfmono items-center">
+        <p data-aos="fade-down" data-aos-delay="300"><a href="#about"><span class="text-white">01.</span> About</a></p>
+        <p data-aos="fade-down" data-aos-delay="400"><a href="#experience"><span class="text-white">02.</span> Experience</a></p>
+        <p data-aos="fade-down" data-aos-delay="500"><a href="#work"><span class="text-white">03.</span> Work</a></p>
+        <p data-aos="fade-down" data-aos-delay="600"><a href="#contact"><span class="text-white">04.</span> Contact</a></p>
+        <a href="" data-aos="fade-down" data-aos-delay="700"><p class="font-sfmono text-green border border-green rounded px-4 py-2 hover:bg-light-navy hover:text-green transition">Resume</p></a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden" data-aos="fade-left" data-aos-delay="300">
+        <button id="menu-button" class="text-lightest-slate hover:text-green transition">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div id="mobile-sidebar" class="fixed top-0 right-0 h-full w-[75%] max-w-[400px] bg-navy shadow-2xl transform translate-x-full z-50">
+    <div class="flex justify-end p-8">
+      <button id="close-button" class="text-lightest-slate hover:text-green transition">
+        <i class="fa-solid fa-xmark text-2xl"></i>
+      </button>
+    </div>
+    <div class="flex flex-col items-center space-y-8 mt-8 font-sfmono">
+      <a href="#about" class="text-lightest-slate hover:text-green transition">
+        <span class="text-green">01.</span> About
+      </a>
+      <a href="#experience" class="text-lightest-slate hover:text-green transition">
+        <span class="text-green">02.</span> Experience
+      </a>
+      <a href="#work" class="text-lightest-slate hover:text-green transition">
+        <span class="text-green">03.</span> Work
+      </a>
+      <a href="#contact" class="text-lightest-slate hover:text-green transition">
+        <span class="text-green">04.</span> Contact
+      </a>
+      <a href="" class="text-green border border-green rounded px-4 py-2 hover:bg-light-navy hover:text-green transition">
+        Resume
+      </a>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="sidebar-overlay" class="fixed top-0 right-0 h-full w-[75%] max-w-[400px] bg-navy bg-opacity-70 backdrop-blur-sm z-40 hidden transform translate-x-full"></div>
+
+  <main>
+    <div id="home" class="h-screen flex items-center justify-center px-4">
+      <div class="flex flex-col mx-4 sm:mx-16 md:mx-32 lg:mx-64 items-center sm:items-start text-center sm:text-left">
+        <p class="text-white font-sfmono" data-aos="fade-up" data-aos-delay="100">Hi, my name is</p>
+        <h1 class="text-lightest-slate font-calibre font-bold text-4xl sm:text-6xl lg:text-8xl mt-2" data-aos="fade-up" data-aos-delay="200">Gayuh Mukti Aji.</h1>
+        <h1 class="text-slate font-calibre font-bold text-4xl sm:text-6xl lg:text-8xl mt-2 mb-6" data-aos="fade-up" data-aos-delay="300">I build things for the web.</h1>
+        <p class="text-slate font-calibre text-base sm:text-lg lg:text-xl leading-relaxed mb-12 sm:mb-16 w-full sm:w-4/5 lg:w-1/2" data-aos="fade-up" data-aos-delay="400">
+          I am a junior developer, actually I can do more than just create websites, I also enjoy exploring anything related to technology, especially IoT projects.
+        </p>
+        <a href="mailto:gayuhmuktiaji9@gmail.com?subject=Say Hello&body=Hi%20Aji,%0A%0AThis%20is%20a%20test%20email." 
+           class="font-sfmono text-green border border-green rounded px-6 py-3 hover:bg-light-navy hover:text-green transition" data-aos="fade-up" data-aos-delay="500">
+          Touch Me!
+        </a>        
+      </div>
+    </div>
+
+    <div
+  id="about"
+  class="h-auto min-h-screen flex flex-col md:flex-row items-center justify-center px-4 md:px-16 lg:px-72 text-slate font-calibre text-base md:text-xl py-10"
+>
+  <!-- Kolom Teks -->
+  <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left" data-aos="fade-right">
+    <!-- Header -->
+    <div class="w-full flex justify-center md:justify-start items-center mb-8">
+      <p class="text-green font-sfmono text-xl mr-4">01.</p>
+      <h2 class="text-lightest-slate text-2xl md:text-3xl font-bold whitespace-nowrap">
+        About Me
+      </h2>
+      <div class="hidden md:block flex-1 h-px bg-lightest-navy ml-4"></div>
+    </div>
+
+    <!-- Paragraf -->
+    <p class="mb-6 leading-relaxed" data-aos="fade-right" data-aos-delay="100">
+      Hello! My name is Aji and I enjoy creating digital products and connected
+      devices that exist on the internet. My interest in technology started in
+      2019 when COVID-19 came and everything turned digital! Since then, I've
+      been passionate about exploring both web development and Internet of Things
+      (IoT) projects.
+      <br /><br />
+      My current main focus is to develop accessible, inclusive, and impactful
+      digital solutions and connected applications at Upstatement for various
+      clients.
+      <br /><br />
+      Here are some of the technologies I have recently been working with:
+    </p>
+
+    <!-- Daftar Teknologi -->
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6" data-aos="fade-right" data-aos-delay="200">
+      <li class="flex items-center font-sfmono text-light-slate text-sm">
+        <span class="text-green mr-2">▹</span> JavaScript (ES6+)
+      </li>
+      <li class="flex items-center font-sfmono text-light-slate text-sm">
+        <span class="text-green mr-2">▹</span> TypeScript
+      </li>
+      <li class="flex items-center font-sfmono text-light-slate text-sm">
+        <span class="text-green mr-2">▹</span> ReactJS
+      </li>
+      <li class="flex items-center font-sfmono text-light-slate text-sm">
+        <span class="text-green mr-2">▹</span> NextJS
+      </li>
+      <li class="flex items-center font-sfmono text-light-slate text-sm">
+        <span class="text-green mr-2">▹</span> Node.js
+      </li>
+      <li class="flex items-center font-sfmono text-light-slate text-sm">
+        <span class="text-green mr-2">▹</span> Arduino
+      </li>
+    </ul>
+  </div>
+
+  <!-- Kolom Foto (dipindah ke bawah di mobile) -->
+  <div class="relative group w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mt-10 md:mt-0 md:ml-12" data-aos="fade-left">
+    <img
+      src="./src/images/my-photo.jpeg"
+      alt="Aji"
+      class="w-full h-full object-cover rounded-lg transition duration-300 ease-in-out md:grayscale md:group-hover:grayscale-0 relative z-10"
+    />
+    <div
+      class="absolute top-5 left-5 w-full h-full border-2 border-green rounded-lg -z-10 transition-all duration-300 group-hover:top-3 group-hover:left-3"
+    ></div>
+  </div>
+</div>
+
+<div id="experience" class="min-h-screen flex items-center justify-center mb-56 md:mb-0">
+  <div class="flex flex-col md:flex-row justify-center items-center md:items-start text-slate font-calibre text-xl md:mx-[29rem] mx-4 mt-[70px] md:mt-[-250px] w-full max-w-6xl" data-aos="fade-up">
+    <div class="w-full">
+      <div class="flex items-center justify-center md:justify-start mb-10">
+        <p class="text-green font-sfmono text-xl md:text-2xl mr-4">02.</p>
+        <h2 class="text-lightest-slate text-xl md:md:text-4xl font-bold whitespace-nowrap">Where I've Worked</h2>
+        <div class="hidden md:block w-full h-px bg-lightest-navy ml-6"></div>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:space-x-6">
+        <!-- Tabs -->
+        <div class="flex md:flex-col flex-row justify-center md:justify-start text-sm mb-6 md:mb-0" id="job-tabs">
+          <button class="tab-button group text-green bg-light-navy px-5 py-3 text-left font-sfmono border-l-2 md:border-l-2 border-b-2 md:border-b-0 border-green hover:text-green focus:outline-none" data-index="0">
+            Digicraft
+          </button>
+          <button class="tab-button group text-slate hover:bg-light-navy px-5 py-3 text-left font-sfmono border-l-2 md:border-l-2 border-b-2 md:border-b-0 border-lightest-navy hover:text-green focus:outline-none" data-index="1">
+            Neuronworks
+          </button>
+        </div>
+
+        <!-- Job content -->
+        <div class="md:ml-6 relative w-full" id="job-content">
+          <!-- Digicraft -->
+          <div class="job-panel absolute w-full">
+            <h3 class="text-lightest-slate text-2xl font-semibold">Fullstack Developer <span class="text-green">@ Digicraft</span></h3>
+            <p class="font-sfmono text-light-slate text-sm mt-1 mb-6">Jan 2024 – Present</p>
+            <ul class="space-y-2">
+              <li><span class="text-green mr-2">▹</span>Designed and implemented responsive, accessible UI components using React, Tailwind CSS, and modern JavaScript (ES6+), ensuring seamless performance across various devices and screen sizes.</li>
+              <li><span class="text-green mr-2">▹</span>Collaborated closely with the IoT division to build real-time data visualization dashboards, enabling end-users to monitor and interact with connected devices effectively and intuitively.</li>
+              <li><span class="text-green mr-2">▹</span>Participated in Agile ceremonies and cross-functional collaboration with UI/UX designers, backend engineers, and QA teams to deliver scalable, maintainable software features with a strong focus on user experience.</li>
+            </ul>
+          </div>
+
+          <!-- Neuronworks -->
+          <div class="job-panel absolute w-full opacity-0 pointer-events-none">
+            <h3 class="text-lightest-slate text-2xl font-semibold">Junior Developer Intern <span class="text-green">@ Neuronworks</span></h3>
+            <p class="font-sfmono text-light-slate text-sm mt-1 mb-6">Aug 2021 – Dec 2023</p>
+            <ul class="space-y-2">
+              <li><span class="text-green mr-2">▹</span>Participated in Agile ceremonies and cross-functional collaboration with UI/UX designers, backend engineers, and QA teams to deliver scalable, maintainable software features with a strong focus on user experience.</li>
+              <li><span class="text-green mr-2">▹</span>Designed and implemented responsive, accessible UI components using React, Tailwind CSS, and modern JavaScript (ES6+), ensuring seamless performance across various devices and screen sizes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<div id="work" class="h-auto flex items-center justify-center text-slate font-calibre bg-[#0a192f] pt-40 pb-20">
+  <div class="w-[90%] md:w-[80%] lg:w-[70%] flex flex-col justify-center items-center">
+    <div class="flex items-center mb-16 w-full" data-aos="fade-up">
+      <p class="text-green font-sfmono text-xl mr-4">03.</p>
+      <h2 class="text-lightest-slate text-2xl md:text-3xl font-bold whitespace-nowrap">Some Things I've Built</h2>
+      <div class="w-[30%] md:w-[50%] lg:w-[70%] h-px bg-lightest-navy ml-6"></div>
+    </div>
+
+    <!-- card1 -->
+    <div class="flex flex-col md:flex-row w-full relative mb-28" data-aos="fade-up">
+      <div class="relative w-full md:w-[60%] aspect-square md:h-[400px]">
+        <div class="group w-full h-full relative overflow-hidden rounded-lg">
+          <img
+            src="./src/images/gamifikasi-produktivitas.png"
+            alt="Gamifikasi Produktivitas"
+            class="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-50 md:hidden rounded-lg"
+          />
+          <img
+            src="./src/images/gamifikasi-produktivitas.png"
+            alt="Gamifikasi Produktivitas"
+            class="relative w-full h-full object-contain md:object-cover rounded-lg md:grayscale group-hover:grayscale-0 transition duration-300 ease-in-out z-10"
+          />
+        </div>
+      </div>
+      <div class="md:absolute right-0 top-0 z-10 w-full md:w-[55%] text-center md:text-right mt-6 md:mt-0">
+        <p class="font-sfmono text-green text-sm">Featured Project</p>
+        <h1 class="font-calibre text-lightest-slate text-3xl md:text-4xl lg:text-5xl font-bold mt-3">Prodboost</h1>
+        
+        <div class="bg-light-navy rounded-lg mt-7 shadow-md shadow-slate-800">
+          <p class="text-slate text-base md:text-lg p-6 leading-6">
+            This app uses gamification methods to enhance employee performance, featuring points, challenges, and levels. Built with modern frontend and backend technologies, it integrates with internal systems to track productivity and create a dynamic, engaging work environment.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 justify-center md:justify-end mt-5 w-full text-sm text-slate font-sfmono">
+          <p>React</p>
+          <p>Express</p>
+          <p>Styled Components</p>
+          <p>Tailwind</p>
+        </div>
+
+        <div class="flex justify-center md:justify-end gap-5 text-lightest-slate mt-4">
+          <a href="https://github.com/prodboost" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-green transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.387 7.86 10.909.575.106.786-.25.786-.555v-2.153c-3.2.697-3.872-1.542-3.872-1.542-.523-1.326-1.276-1.68-1.276-1.68-1.042-.713.079-.699.079-.699 1.153.082 1.759 1.183 1.759 1.183 1.024 1.754 2.688 1.247 3.342.954.104-.742.4-1.247.728-1.534-2.553-.291-5.236-1.277-5.236-5.684 0-1.255.448-2.28 1.182-3.084-.119-.29-.512-1.459.112-3.042 0 0 .964-.308 3.16 1.176.916-.254 1.898-.381 2.875-.386.977.005 1.96.132 2.878.386 2.192-1.484 3.154-1.176 3.154-1.176.627 1.583.233 2.752.114 3.042.737.804 1.18 1.83 1.18 3.084 0 4.417-2.688 5.389-5.252 5.675.41.356.775 1.06.775 2.137v3.166c0 .307.208.666.79.553C20.712 21.384 24 17.083 24 12c0-6.352-5.148-11.5-11.5-11.5z"/>
+            </svg>
+          </a>
+          <a href="https://prodboost.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-green transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14 3v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"/>
+              <path d="M5 5h5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-5h-2v5H5V5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="flex flex-col md:flex-row-reverse w-full relative mb-28" data-aos="fade-up">
+      <div class="relative w-full md:w-[60%] aspect-square md:h-[400px]">
+        <div class="group w-full h-full relative overflow-hidden rounded-lg">
+          <img
+            src="./src/images/gamifikasi-produktivitas.png"
+            alt="Gamifikasi Produktivitas"
+            class="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-50 md:hidden rounded-lg"
+          />
+          <img
+            src="./src/images/gamifikasi-produktivitas.png"
+            alt="Gamifikasi Produktivitas"
+            class="relative w-full h-full object-contain md:object-cover rounded-lg md:grayscale group-hover:grayscale-0 transition duration-300 ease-in-out z-10"
+          />
+        </div>
+      </div>
+    
+      <div class="md:absolute left-0 top-0 z-10 w-full md:w-[55%] text-center md:text-left mt-6 md:mt-0">
+        <p class="font-sfmono text-green text-sm">Featured Project</p>
+        <h1 class="font-calibre text-lightest-slate text-3xl md:text-4xl lg:text-5xl font-bold mt-3">Prodboost</h1>
+    
+        <div class="bg-light-navy rounded-lg mt-7 shadow-md shadow-slate-800">
+          <p class="text-slate text-base md:text-lg p-6 leading-6">
+            This app uses gamification methods to enhance employee performance, featuring points, challenges, and levels. Built with modern frontend and backend technologies, it integrates with internal systems to track productivity and create a dynamic, engaging work environment.
+          </p>
+        </div>
+    
+        <div class="flex flex-wrap gap-x-6 justify-center md:justify-start mt-5 w-full text-sm text-slate font-sfmono">
+          <p>React</p>
+          <p>Express</p>
+          <p>Styled Components</p>
+          <p>Tailwind</p>
+        </div>
+    
+        <div class="flex justify-center md:justify-start gap-5 text-lightest-slate mt-4">
+          <a href="https://github.com/prodboost" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-green transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.387 7.86 10.909.575.106.786-.25.786-.555v-2.153c-3.2.697-3.872-1.542-3.872-1.542-.523-1.326-1.276-1.68-1.276-1.68-1.042-.713.079-.699.079-.699 1.153.082 1.759 1.183 1.759 1.183 1.024 1.754 2.688 1.247 3.342.954.104-.742.4-1.247.728-1.534-2.553-.291-5.236-1.277-5.236-5.684 0-1.255.448-2.28 1.182-3.084-.119-.29-.512-1.459.112-3.042 0 0 .964-.308 3.16 1.176.916-.254 1.898-.381 2.875-.386.977.005 1.96.132 2.878.386 2.192-1.484 3.154-1.176 3.154-1.176.627 1.583.233 2.752.114 3.042.737.804 1.18 1.83 1.18 3.084 0 4.417-2.688 5.389-5.252 5.675.41.356.775 1.06.775 2.137v3.166c0 .307.208.666.79.553C20.712 21.384 24 17.083 24 12c0-6.352-5.148-11.5-11.5-11.5z"/>
+            </svg>
+          </a>
+          <a href="https://prodboost.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-green transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14 3v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"/>
+              <path d="M5 5h5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-5h-2v5H5V5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- card3 -->
+    <div class="flex flex-col md:flex-row w-full relative mb-28" data-aos="fade-up">
+      <div class="relative w-full md:w-[60%] aspect-square md:h-[400px]">
+        <div class="group w-full h-full relative overflow-hidden rounded-lg">
+          <img
+            src="./src/images/gamifikasi-produktivitas.png"
+            alt="Gamifikasi Produktivitas"
+            class="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-50 md:hidden rounded-lg"
+          />
+          <img
+            src="./src/images/gamifikasi-produktivitas.png"
+            alt="Gamifikasi Produktivitas"
+            class="relative w-full h-full object-contain md:object-cover rounded-lg md:grayscale group-hover:grayscale-0 transition duration-300 ease-in-out z-10"
+          />
+        </div>
+      </div>
+      <div class="md:absolute right-0 top-0 z-10 w-full md:w-[55%] text-center md:text-right mt-6 md:mt-0">
+        <p class="font-sfmono text-green text-sm">Featured Project</p>
+        <h1 class="font-calibre text-lightest-slate text-3xl md:text-4xl lg:text-5xl font-bold mt-3">Prodboost</h1>
+        
+        <div class="bg-light-navy rounded-lg mt-7 shadow-md shadow-slate-800">
+          <p class="text-slate text-base md:text-lg p-6 leading-6">
+            This app uses gamification methods to enhance employee performance, featuring points, challenges, and levels. Built with modern frontend and backend technologies, it integrates with internal systems to track productivity and create a dynamic, engaging work environment.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 justify-center md:justify-end mt-5 w-full text-sm text-slate font-sfmono">
+          <p>React</p>
+          <p>Express</p>
+          <p>Styled Components</p>
+          <p>Tailwind</p>
+        </div>
+
+        <div class="flex justify-center md:justify-end gap-5 text-lightest-slate mt-4">
+          <a href="https://github.com/prodboost" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-green transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.387 7.86 10.909.575.106.786-.25.786-.555v-2.153c-3.2.697-3.872-1.542-3.872-1.542-.523-1.326-1.276-1.68-1.276-1.68-1.042-.713.079-.699.079-.699 1.153.082 1.759 1.183 1.759 1.183 1.024 1.754 2.688 1.247 3.342.954.104-.742.4-1.247.728-1.534-2.553-.291-5.236-1.277-5.236-5.684 0-1.255.448-2.28 1.182-3.084-.119-.29-.512-1.459.112-3.042 0 0 .964-.308 3.16 1.176.916-.254 1.898-.381 2.875-.386.977.005 1.96.132 2.878.386 2.192-1.484 3.154-1.176 3.154-1.176.627 1.583.233 2.752.114 3.042.737.804 1.18 1.83 1.18 3.084 0 4.417-2.688 5.389-5.252 5.675.41.356.775 1.06.775 2.137v3.166c0 .307.208.666.79.553C20.712 21.384 24 17.083 24 12c0-6.352-5.148-11.5-11.5-11.5z"/>
+            </svg>
+          </a>
+          <a href="https://prodboost.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-green transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14 3v2h3.586l-9.293 9.293 1.414 1.414L19 6.414V10h2V3h-7z"/>
+              <path d="M5 5h5V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-5h-2v5H5V5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <div id="contact" class="min-h-screen flex flex-col justify-between items-center text-slate font-calibre bg-[#0a192f] pt-8 px-4">
+      <div class="flex flex-col items-center justify-center w-full flex-1">
+        <div class="flex items-center justify-center mb-4" data-aos="fade-up">
+          <p class="text-green font-sfmono text-lg mr-4">04.</p>
+          <h2 class="text-green font-sfmono text-lg whitespace-nowrap">What's Next?</h2>
+        </div>
+        <h1 class="text-6xl md:text-7xl font-bold text-lightest-slate text-center" data-aos="fade-up" data-aos-delay="100">Get In Touch</h1>
+        <p class="text-lg md:text-xl my-6 text-center leading-6 max-w-[600px]" data-aos="fade-up" data-aos-delay="200">
+          Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        </p>
+        <a href="mailto:gayuhmuktiaji9@gmail.com?subject=Say Hello&body=Hi%20Aji,%0A%0AThis%20is%20a%20test%20email." class="font-sfmono text-green border border-green rounded px-6 py-3 hover:bg-light-navy hover:text-green transition" data-aos="fade-up" data-aos-delay="300">
+          Say Hello
+        </a>        
+      </div>
+    
+      <div class="mb-4">
+        <p class="text-light-slate font-sfmono text-sm text-center">Designed & Built by Gayuh Mukti Aji<br>2024</p>
+      </div>
+    </div>
+    
+    <div class="fixed bottom-0 left-8 flex flex-col items-center space-y-6 hidden md:flex">
+      <a href="https://github.com/GayuhmA" target="_blank" class="text-light-slate hover:text-green transition" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-brands fa-github text-2xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/gayuh-mukti-aji-9332ab365/" target="_blank" class="text-light-slate hover:text-green transition" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-brands fa-linkedin text-2xl"></i>
+      </a>
+      <a href="https://instagram.com/jiia_you" target="_blank" class="text-light-slate hover:text-green transition" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-brands fa-instagram text-2xl"></i>
+      </a>
+      <div class="w-px h-40 bg-light-slate mt-4" data-aos="fade-up" data-aos-delay="400"></div>
+    </div>
+
+    <!-- Mobile Social Media Icons -->
+    <div class="md:hidden flex justify-center items-center space-x-8 py-8">
+      <a href="https://github.com/GayuhmA" target="_blank" class="text-light-slate hover:text-green transition" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-brands fa-github text-2xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/gayuh-mukti-aji-9332ab365/" target="_blank" class="text-light-slate hover:text-green transition" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-brands fa-linkedin text-2xl"></i>
+      </a>
+      <a href="https://instagram.com/jiia_you" target="_blank" class="text-light-slate hover:text-green transition" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-brands fa-instagram text-2xl"></i>
+      </a>
+    </div>
+    
+  </main>
+</body>
+
+</html>
