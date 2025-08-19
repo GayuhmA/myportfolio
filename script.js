@@ -100,3 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // See More button functionality
+    const seeMoreBtn = document.getElementById('see-more-btn');
+    const moreProjects = document.getElementById('more-projects');
+    if (seeMoreBtn && moreProjects) {
+        seeMoreBtn.addEventListener('click', function() {
+            moreProjects.classList.toggle('hidden');
+            this.textContent = moreProjects.classList.contains('hidden') ? 'See More' : 'See Less';
+        });
+    }
+});
